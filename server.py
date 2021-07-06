@@ -1,6 +1,5 @@
 from linmodel import LinModel
 from seal import *
-import json
 import os
 
 def getData(context, filename):
@@ -25,8 +24,6 @@ def computeData(context):
         encoder.encode(coeff[i], scale, plaintext)
         plain_coeff.append(plaintext)
 
-    
-    ## Prova vettore coef cifrato
     cipher_coeff = []
     public_key = PublicKey()
     public_key.load(context, "keys/public.key")

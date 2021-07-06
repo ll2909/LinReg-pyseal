@@ -1,6 +1,5 @@
 from seal import *
 import os
-import pickle
 import numpy as np
 import server
 
@@ -30,8 +29,8 @@ def getKeys(context):
 	else:
 		try:
 			os.mkdir("keys")
-		except OSError as error:
-			print(error)
+		except OSError:
+			pass
 		keygen = KeyGenerator(context)
 		public_key = keygen.public_key()
 		private_key = keygen.secret_key()
@@ -73,7 +72,6 @@ def encryptData(data, context, key, dst):
 	#Encrypting (l'oggetto ciphertext viene "riempito" con i numeri criptati)
 	encryptor.encrypt(plaintext, ciphertext)
 
-	# print(ciphertext)
 	ciphertext.save(dst)
 
 	print("Saved ciphertext")
@@ -84,8 +82,8 @@ if __name__ == "__main__":
 
 	try:
 		os.mkdir("data")
-	except OSError as error:
-		print(error)
+	except OSError:
+		pass
 
 	context = initSeal()
 	public_key, private_key = getKeys(context)

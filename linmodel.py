@@ -4,15 +4,10 @@ from sklearn import preprocessing
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split 
 from sklearn.metrics import mean_squared_error, r2_score
-import pickle
 
 class LinModel:
 	def __init__(self):
 		pass
-
-	def deserializeData():
-		data = pickle.load("ciphertext")
-		return data
 
 	def getResults(self):
 		df=pd.read_csv('employee_data.csv')
