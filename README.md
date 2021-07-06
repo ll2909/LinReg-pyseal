@@ -2,7 +2,7 @@
 Linear Regression using Microsoft SEAL Homomorphic Encription API.
 
 Based on satssehgal's project, showed on https://youtu.be/nlsd2LO-S50
-his repo: https://github.com/satssehgal/Homomorphic-Encryption
+, his repo: https://github.com/satssehgal/Homomorphic-Encryption
 
 I kept the same client/server architecture and the same methods for the
 linear regression model (sklearn.linear_model) as shown in the video, I just changed
