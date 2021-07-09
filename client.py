@@ -41,9 +41,6 @@ def getKeys(context):
 
 	return public_key, private_key
 
-def serializeData(data, dst, filename):
-    pickle.dump(data, open(dst + filename, "wb"))
-
 def encryptData(data, context, key, dst):
 
 	data_shape = np.shape(data)
