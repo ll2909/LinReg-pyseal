@@ -9,10 +9,7 @@ linear regression model training (sklearn.linear_model) as shown in the video, I
 the encryption backend, using pySEAL (https://github.com/Lab41/PySEAL), a port of
 Microsoft SEAL API, natively written in C++ (https://github.com/microsoft/SEAL).
 
-Additional requirements:
-numpy
-pandas
-sklearn
+Additional requirements are: numpy, pandas and sklearn
 
 To run/test the program, run the script client.py
 
